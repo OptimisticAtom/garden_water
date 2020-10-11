@@ -42,6 +42,13 @@ class Timer:
 BlinkTimer = Timer()
 
 
+def gal_to_sec(gallons):
+    return (159/5)*gallons
+
+
+maxWaterMinutes = int(gal_to_sec(5) / 60)
+
+
 def blinkLed():
     global ledState
     timeSinceLastBlink = BlinkTimer.timer()
